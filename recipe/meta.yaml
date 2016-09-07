@@ -31,6 +31,7 @@ test:
     - coverage
     - nose
     - pip
+    - python
     - simplejson
   commands:
     - pip install -r requirements.txt
