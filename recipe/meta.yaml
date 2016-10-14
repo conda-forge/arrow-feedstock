@@ -38,7 +38,7 @@ test:
     - nosetests "{{ environ["SRC_DIR"] }}"
 
 about:
-  home: https://github.com/{{ gh_org }}/{{ gh_repo }}
+  home: https://github.com/crsmithdev/arrow
   license: Apache-2.0
   summary: Better dates & times for Python
 
