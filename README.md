@@ -11,6 +11,18 @@ Summary: Better dates & times for Python
 
 
 
+Current build status
+====================
+
+Linux: [![Circle CI](https://circleci.com/gh/conda-forge/arrow-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/arrow-feedstock)
+OSX: [![TravisCI](https://travis-ci.org/conda-forge/arrow-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/arrow-feedstock)
+Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/arrow-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/arrow-feedstock/branch/master)
+
+Current release info
+====================
+Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/arrow/badges/version.svg)](https://anaconda.org/conda-forge/arrow)
+Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/arrow/badges/downloads.svg)](https://anaconda.org/conda-forge/arrow)
+
 Installing arrow
 ================
 
@@ -31,7 +43,6 @@ It is possible to list all of the versions of `arrow` available on your platform
 ```
 conda search arrow --channel conda-forge
 ```
-
 
 
 About conda-forge
@@ -67,18 +78,6 @@ Terminology
 
 **conda-forge** - the place where the feedstock and smithy live and work to
                   produce the finished article (built conda distributions)
-
-Current build status
-====================
-
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/arrow-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/arrow-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/arrow-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/arrow-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/arrow-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/arrow-feedstock/branch/master)
-
-Current release info
-====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/arrow/badges/version.svg)](https://anaconda.org/conda-forge/arrow)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/arrow/badges/downloads.svg)](https://anaconda.org/conda-forge/arrow)
 
 
 Updating arrow-feedstock
