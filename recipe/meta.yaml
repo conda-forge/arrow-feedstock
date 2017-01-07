@@ -25,7 +25,7 @@ requirements:
 
 test:
   source_files:
-    - "{{ environ['SRC_DIR'] }}"
+    - {{ environ['SRC_DIR'] }}
   requires:
     - nose
     - chai
