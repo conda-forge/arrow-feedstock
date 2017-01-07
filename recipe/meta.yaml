@@ -28,12 +28,11 @@ test:
     - nose-cov
     - chai
     - simplejson
-  commands:
-    - nosetests "{{ environ['SRC_DIR'] }}"
 
 about:
   home: https://github.com/crsmithdev/arrow
   license: Apache-2.0
+  license_file: LICENSE
   summary: 'Better dates & times for Python.'
 
 extra:
