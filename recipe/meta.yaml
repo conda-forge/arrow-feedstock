@@ -24,10 +24,14 @@ requirements:
     - python-dateutil
 
 test:
+  source_files:
+    - tests
   requires:
-    - nose-cov
+    - nose
     - chai
     - simplejson
+  commands:
+    - nosetests
 
 about:
   home: https://github.com/crsmithdev/arrow
