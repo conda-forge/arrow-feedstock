@@ -14,9 +14,7 @@ Summary: Better dates & times for Python.
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/arrow-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/arrow-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/arrow-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/arrow-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/arrow-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/arrow-feedstock/branch/master)
+All platforms: [![Circle CI](https://circleci.com/gh/conda-forge/arrow-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/arrow-feedstock)
 
 Current release info
 ====================
