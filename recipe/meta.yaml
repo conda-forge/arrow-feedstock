@@ -1,13 +1,14 @@
-{% set version = "0.12.0" %}
-{% set gh_org = "crsmithdev" %}
+{% set name = "arrow" %}
+{% set version = "0.12.1" %}
+{% set sha256 = "a558d3b7b6ce7ffc74206a86c147052de23d3d4ef0e17c210dd478c53575c4cd" %}
 
 package:
-  name: arrow
-  version: {{ version }}
+  name: {{ name }}
+  version: "{{ version }}"
 
 source:
-  url: https://pypi.io/packages/source/a/arrow/arrow-{{ version }}.tar.gz
-  sha256: a15ecfddf334316e3ac8695e48c15d1be0d6038603b33043930dcf0e675c86ee
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: {{ sha256 }}
 
 build:
   number: 0
