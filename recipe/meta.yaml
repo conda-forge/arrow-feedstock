@@ -1,23 +1,21 @@
-{% set name = "arrow" %}
 {% set version = "0.12.1" %}
-{% set sha256 = "a558d3b7b6ce7ffc74206a86c147052de23d3d4ef0e17c210dd478c53575c4cd" %}
 
 package:
-  name: {{ name }}
-  version: "{{ version }}"
+  name: arrow
+  version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  url: https://pypi.io/packages/source/a/arrow/arrow-{{ version }}.tar.gz
+  sha256: a558d3b7b6ce7ffc74206a86c147052de23d3d4ef0e17c210dd478c53575c4cd
 
 build:
-  number: 1
-  script: python setup.py install --single-version-externally-managed --record=record.txt
+  number: 2
+  script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
-  build:
+  host:
     - python
-    - setuptools
+    - pip
   run:
     - python
     - python-dateutil
