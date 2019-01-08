@@ -28,6 +28,7 @@ test:
     - nose
     - chai
     - simplejson
+    - pytz
   commands:
     - nosetests
 
