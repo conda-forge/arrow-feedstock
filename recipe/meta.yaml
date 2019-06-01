@@ -16,10 +16,12 @@ requirements:
   host:
     - python
     - pip
+    - python-dateutil
+    - backports.functools_lru_cache  # [py27]
   run:
     - python
     - python-dateutil
-    - backports.functools_lru_cache  # [py2k]
+    - backports.functools_lru_cache  # [py27]
 
 test:
   source_files:
@@ -37,7 +39,7 @@ about:
   license: Apache-2.0
   license_file: LICENSE
   license_family: Apache
-  summary: 'Better dates & times for Python.'
+  summary: 'Better dates & times for Python'
   description: |
     Arrow is a Python library that offers a sensible, human-friendly approach to
     creating, manipulating, formatting and converting dates, times, and timestamps.
