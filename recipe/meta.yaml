@@ -1,4 +1,4 @@
-{% set version = "0.13.2" %}
+{% set version = "0.14.0" %}
 
 package:
   name: arrow
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/a/arrow/arrow-{{ version }}.tar.gz
-  sha256: 82dd5e13b733787d4eb0fef42d1ee1a99136dc1d65178f70373b3678b3181bfc
+  sha256: f1837ac68cc954fd910b24c9f998172d1b430b0b255e875e9d190a16463e85e1
 
 build:
   number: 0
@@ -16,10 +16,12 @@ requirements:
   host:
     - python
     - pip
+    - python-dateutil
+    - backports.functools_lru_cache  # [py27]
   run:
     - python
     - python-dateutil
-    - backports.functools_lru_cache  # [py2k]
+    - backports.functools_lru_cache  # [py27]
 
 test:
   source_files:
@@ -37,7 +39,7 @@ about:
   license: Apache-2.0
   license_file: LICENSE
   license_family: Apache
-  summary: 'Better dates & times for Python.'
+  summary: 'Better dates & times for Python'
   description: |
     Arrow is a Python library that offers a sensible, human-friendly approach to
     creating, manipulating, formatting and converting dates, times, and timestamps.
