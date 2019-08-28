@@ -31,6 +31,7 @@ test:
     - chai
     - simplejson
     - pytz
+    - mock
   commands:
     - nosetests
 
@@ -48,7 +49,7 @@ about:
     scenarios. Simply put, it helps you work with dates and times with fewer
     imports and a lot less code.
   dev_url: https://github.com/crsmithdev/arrow
-  doc_url: http://arrow.readthedocs.org
+  doc_url: https://arrow.readthedocs.io
 
 extra:
   recipe-maintainers:
