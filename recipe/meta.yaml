@@ -1,4 +1,4 @@
-{% set version = "0.14.7" %}
+{% set version = "0.15.0" %}
 
 package:
   name: arrow
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/a/arrow/arrow-{{ version }}.tar.gz
-  sha256: 67f8be7c0cf420424bc62d8d7dc40b44e4bb2f7b515f9cc2954fb36e35797656
+  sha256: 9b92a8e151e168b742a36b622deadf860d1686af8c5bbe46eca8da04b10fe92f
 
 build:
   number: 0
