@@ -32,6 +32,7 @@ test:
     - simplejson
     - pytz
     - mock
+    - dateparser
   commands:
     - nosetests
 
