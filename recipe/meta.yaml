@@ -34,7 +34,8 @@ test:
     - mock
     - dateparser
   commands:
-    - nosetests
+    - nosetests  # [not win]
+    - nosetests --exclude test_parse_timestamp  # [win]
 
 about:
   home: https://github.com/crsmithdev/arrow
