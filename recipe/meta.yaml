@@ -1,4 +1,4 @@
-{% set version = "0.15.1" %}
+{% set version = "0.15.2" %}
 
 package:
   name: arrow
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/a/arrow/arrow-{{ version }}.tar.gz
-  sha256: c65ea9214403c77b09bd676cba3dcf1e0a396f5dfb316b811bb7f7e10d99e955
+  sha256: 10257c5daba1a88db34afa284823382f4963feca7733b9107956bed041aff24f
 
 build:
   number: 0
@@ -34,8 +34,7 @@ test:
     - mock
     - dateparser
   commands:
-    - nosetests  # [not win]
-    - nosetests --exclude test_parse_timestamp  # [win]
+    - nosetests
 
 about:
   home: https://github.com/crsmithdev/arrow
