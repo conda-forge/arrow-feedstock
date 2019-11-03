@@ -1,23 +1,26 @@
-{% set version = "0.15.2" %}
+{% set version = "0.15.3" %}
 
 package:
   name: arrow
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/a/arrow/arrow-{{ version }}.tar.gz
-  sha256: 10257c5daba1a88db34afa284823382f4963feca7733b9107956bed041aff24f
+  - folder: dist
+    url: https://pypi.io/packages/source/a/arrow/arrow-{{ version }}.tar.gz
+    sha256: 742c0086e6a5c033bb251bb675b82867aca7cf6bc19e635f8a34eeefccaac372
+  # TODO revert when upstream restores LICENSE and tests
+  - folder: src
+    url: https://github.com/crsmithdev/arrow/archive/{{ version }}.tar.gz
+    sha256: d6a508b408750cd071654e86ed02d8046d62b16f90a57d8e00b62a34c05d05fd
 
 build:
   number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  script: "cd dist && {{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
   host:
     - python
     - pip
-    - python-dateutil
-    - backports.functools_lru_cache  # [py27]
   run:
     - python
     - python-dateutil
@@ -25,7 +28,7 @@ requirements:
 
 test:
   source_files:
-    - tests
+    - src/tests
   requires:
     - nose
     - chai
@@ -34,12 +37,12 @@ test:
     - mock
     - dateparser
   commands:
-    - nosetests
+    - cd src && cd tests && nosetests
 
 about:
   home: https://github.com/crsmithdev/arrow
   license: Apache-2.0
-  license_file: LICENSE
+  license_file: src/LICENSE
   license_family: Apache
   summary: 'Better dates & times for Python'
   description: |
@@ -51,6 +54,7 @@ about:
     imports and a lot less code.
   dev_url: https://github.com/crsmithdev/arrow
   doc_url: https://arrow.readthedocs.io
+  doc_source_url: https://github.com/crsmithdev/arrow/tree/master/docs
 
 extra:
   recipe-maintainers:
