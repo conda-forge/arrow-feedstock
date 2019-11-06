@@ -1,21 +1,16 @@
-{% set version = "0.15.3" %}
+{% set version = "0.15.4" %}
 
 package:
   name: arrow
   version: {{ version }}
 
 source:
-  - folder: dist
-    url: https://pypi.io/packages/source/a/arrow/arrow-{{ version }}.tar.gz
-    sha256: 742c0086e6a5c033bb251bb675b82867aca7cf6bc19e635f8a34eeefccaac372
-  # TODO revert when upstream restores LICENSE and tests
-  - folder: src
-    url: https://github.com/crsmithdev/arrow/archive/{{ version }}.tar.gz
-    sha256: d6a508b408750cd071654e86ed02d8046d62b16f90a57d8e00b62a34c05d05fd
+  url: https://pypi.io/packages/source/a/arrow/arrow-{{ version }}.tar.gz
+  sha256: e1a318a4c0b787833ae46302c02488b6eeef413c6a13324b3261ad320f21ec1e
 
 build:
   number: 0
-  script: "cd dist && {{ PYTHON }} -m pip install . --no-deps -vv"
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
   host:
@@ -28,7 +23,7 @@ requirements:
 
 test:
   source_files:
-    - src/tests
+    - tests
   requires:
     - nose
     - chai
@@ -37,12 +32,12 @@ test:
     - mock
     - dateparser
   commands:
-    - cd src && cd tests && nosetests
+    - cd tests && nosetests
 
 about:
   home: https://github.com/crsmithdev/arrow
   license: Apache-2.0
-  license_file: src/LICENSE
+  license_file: LICENSE
   license_family: Apache
   summary: 'Better dates & times for Python'
   description: |
