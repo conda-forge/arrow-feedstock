@@ -19,20 +19,23 @@ requirements:
   run:
     - python
     - python-dateutil
-    - backports.functools_lru_cache  # [py27]
+    - backports.functools_lru_cache >=1.2.1  # [py27]
 
 test:
   source_files:
     - tests
   requires:
-    - nose
-    - chai
-    - simplejson
-    - pytz
-    - mock
     - dateparser
+    - pip
+    - pytest >=4.6,<4.7.0a0  # [py27]
+    - pytest >=5.3,<5.4.0a0  # [not py27]
+    - pytest-cov
+    - pytest-mock
+    - pytz
+    - simplejson
   commands:
-    - cd tests && nosetests
+    - python -m pip check
+    - cd tests && pytest --cov arrow -k "not parse_tz_name_zzz"
 
 about:
   home: https://github.com/crsmithdev/arrow
