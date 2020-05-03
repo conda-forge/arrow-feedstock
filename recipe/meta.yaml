@@ -10,16 +10,16 @@ source:
 
 build:
   number: 0
+  noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
-    - python
+    - python >=3.5
     - pip
   run:
-    - python
+    - python >=3.5
     - python-dateutil
-    - backports.functools_lru_cache >=1.2.1  # [py27]
 
 test:
   source_files:
@@ -27,8 +27,7 @@ test:
   requires:
     - dateparser
     - pip
-    - pytest >=4.6,<4.7.0a0  # [py27]
-    - pytest >=5.3,<5.4.0a0  # [not py27]
+    - pytest >=5.3,<5.4.0a0
     - pytest-cov
     - pytest-mock
     - pytz
