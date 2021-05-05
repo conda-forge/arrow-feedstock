@@ -9,15 +9,16 @@ source:
   sha256: b8fe13abf3517abab315e09350c903902d1447bd311afbc17547ba1cb3ff5bd8
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
+  noarch: python
 
 requirements:
   host:
-    - python
+    - python >=3.6
     - pip
   run:
-    - python
+    - python >=3.6
     - python-dateutil >=2.7.0
     - typing_extensions
 
