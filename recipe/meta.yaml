@@ -28,7 +28,6 @@ test:
     - tests
   requires:
     - dateparser >=1,<2
-    - mypy
     - pip
     - pytest
     - pytest-cov
@@ -37,8 +36,7 @@ test:
     - simplejson >=3,<4
   commands:
     - pip check
-    - cd tests && pytest --cov arrow -k "not parse_tz_name_zzz"
-    - mypy -p arrow
+    - pytest --cov=arrow --cov-branch --cov-report=term-missing:skip-covered --no-cov-on-fail --cov-fail-under=99 -k "not parse_tz_name_zzz"
 
 about:
   home: https://github.com/arrow-py/arrow
