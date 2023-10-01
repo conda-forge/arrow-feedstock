@@ -28,13 +28,13 @@ test:
     - tests
   requires:
     - dateparser >=1,<2
+    - mypy
     - pip
     - pytest
     - pytest-cov
     - pytest-mock
     - pytz
     - simplejson >=3,<4
-    - mypy
   commands:
     - pip check
     - cd tests && pytest --cov arrow -k "not parse_tz_name_zzz"
