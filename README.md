@@ -1,15 +1,13 @@
-About arrow
-===========
-
-Home: https://github.com/crsmithdev/arrow
-
-Package license: Apache-2.0
+About arrow-feedstock
+=====================
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/arrow-feedstock/blob/main/LICENSE.txt)
 
-Summary: Better dates & times for Python
+Home: https://github.com/arrow-py/arrow
 
-Development: https://github.com/crsmithdev/arrow
+Package license: Apache-2.0
+
+Summary: Better dates & times for Python
 
 Documentation: https://arrow.readthedocs.io
 
