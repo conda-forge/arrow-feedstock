@@ -5,21 +5,21 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/a/arrow/arrow-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/a/arrow/arrow-{{ version }}.tar.gz
   sha256: d4540617648cb5f895730f1ad8c82a65f2dad0166f57b75f3ca54759c4d67a85
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   noarch: python
 
 requirements:
   host:
     - flit-core >=3.2,<4
-    - python >=3.8
+    - python {{ python_min }}
     - pip
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - python-dateutil >=2.7.0
     - types-python-dateutil >=2.8.10
 
@@ -34,6 +34,7 @@ test:
     - pytest-mock
     - pytz
     - simplejson >=3,<4
+    - python {{ python_min }}
   commands:
     - pip check
     - pytest --cov=arrow --cov-branch --cov-report=term-missing:skip-covered --no-cov-on-fail --cov-fail-under=99 -k "not parse_tz_name_zzz"
