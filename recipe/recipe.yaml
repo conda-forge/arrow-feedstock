@@ -4,7 +4,7 @@ schema_version: 1
 context:
   version: "1.4.0"
   python_check_max: "3.14"
-  test_skips: parse_tz_name_zzz
+  test_skips: not parse_tz_name_zzz
   cov_fail_under: "99"
 
 package:
@@ -29,7 +29,7 @@ requirements:
   run:
     - python >=${{ python_min }}
     - python-dateutil >=2.7.0
-    - tzdata
+    - python-tzdata
 
 tests:
   - python:
@@ -51,7 +51,7 @@ tests:
         - pytz
         - simplejson >=3,<4
     script:
-      - coverage run --source=arrow --branch -m pytest -vv --tb=long --color=yes -k "not {{ test_skips }}"
+      - coverage run --source=arrow --branch -m pytest -vv --tb=long --color=yes -k "${{ test_skips }}"
       - coverage report --show-missing --skip-covered --fail-under=${{ cov_fail_under }}
 
 about:
