@@ -9,7 +9,7 @@ Package license: Apache-2.0
 
 Summary: Better dates & times for Python
 
-Documentation: https://arrow.readthedocs.io
+Documentation: https://arrow.readthedocs.io/
 
 Arrow is a Python library that offers a sensible, human-friendly approach to
 creating, manipulating, formatting and converting dates, times, and timestamps.
@@ -17,7 +17,6 @@ It implements and updates the datetime type, plugging gaps in functionality,
 and provides an intelligent module API that supports many common creation
 scenarios. Simply put, it helps you work with dates and times with fewer
 imports and a lot less code.
-
 
 Current build status
 ====================
